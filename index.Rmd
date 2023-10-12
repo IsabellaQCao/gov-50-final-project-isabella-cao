@@ -1,6 +1,6 @@
 ---
 title: "Gov 50 Final Project"
-author: "Your Name Here"
+author: "Isabella Cao"
 description: "My final project"
 output:
   distill::distill_article:
@@ -9,6 +9,5 @@ output:
 
 
 
-## Project thoughts
-
-I am interested in exploring data related to...
+## Milestone 2
+Is rural consciousness affected by factors such as education, income, or exposure to diversity? For my final project, I plan on analyzing replication data from Matthew Nelsen and Christopher Petsko’s “Race and White Rural Consciousness” to examine whether the average sense of “rural consciousness” (defined as the view that rural problems are the result of the negligent choices of the elite) is correlated with factors associated with urban living such as earning a higher income, possessing a college degree, and regular exposure to minorities. While the original study found that rural citizens described city dwellers more negatively (e.g. lazy) and also perceived residents of their capital city as being more black (the more extreme the rural consciousness, the more extreme the perception of blackness), I also hypothesize that the three aforementioned factors will be correlated with a lower sense of rural consciousness than originally generalized. These explanatory factors can all be measured empirically using figures such as yearly income, highest degree earned, and demographic percentages of surveyed counties. The outcome variables, perception of blackness and rural consciousness, are pre-measured in the existing data through the mean of a survey that logged positive/negative responses and average composition of faces ranked to be more or less urban.Seeing a negative ATE between each one of these and mean rural consciousness would prove my hypothesis while seeing a variable or increasing ATE would disprove it. 
