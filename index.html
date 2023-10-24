@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/header-attrs-2.17/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["data/Phase1Data.csv","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-3-1.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.24/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1519,7 +1519,105 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-article">
 <h2 id="milestone-2">Milestone 2</h2>
 <p>Is rural consciousness affected by factors such as education, income, or exposure to diversity? For my final project, I plan on analyzing replication data from Matthew Nelsen and Christopher Petsko’s “Race and White Rural Consciousness” to examine whether the average sense of “rural consciousness” (defined as the view that rural problems are the result of the negligent choices of the elite) is correlated with factors associated with urban living such as earning a higher income, possessing a college degree, and regular exposure to minorities. While the original study found that rural citizens described city dwellers more negatively (e.g. lazy) and also perceived residents of their capital city as being more black (the more extreme the rural consciousness, the more extreme the perception of blackness), I also hypothesize that the three aforementioned factors will be correlated with a lower sense of rural consciousness than originally generalized. These explanatory factors can all be measured empirically using figures such as yearly income, highest degree earned, and demographic percentages of surveyed counties. The outcome variables, perception of blackness and rural consciousness, are pre-measured in the existing data through the mean of a survey that logged positive/negative responses and average composition of faces ranked to be more or less urban.Seeing a negative ATE between each one of these and mean rural consciousness would prove my hypothesis while seeing a variable or increasing ATE would disprove it.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
+<span><span class='va'>phase1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"data/Phase1Data.csv"</span><span class='op'>)</span></span>
+<span><span class='va'>phase1</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Exclusions</span> <span class='op'>==</span> <span class='st'>"No"</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code># A tibble: 116 × 360
+   ID        Exclusions Sample RCCondition Composite MKE_1 MKE_2 MKE_3
+   &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;  &lt;chr&gt;       &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
+ 1 R_eMdtru… No         Rural  MKE         Rural_MKE Frie… Beer… Down…
+ 2 R_6paiY9… No         Rural  MKE         Rural_MKE City… Do n… Most…
+ 3 R_e0Xyc8… No         Rural  MKE         Rural_MKE Black Poor  Labo…
+ 4 R_9H93hN… No         Rural  MKE         Rural_MKE Blue… Hard… Fami…
+ 5 R_cZ1HFF… No         Rural  MKE         Rural_MKE City… Frie… Busy 
+ 6 R_a8Z4hW… No         Rural  MKE         Rural_MKE Busy  Weal… Brew…
+ 7 R_nPJqsI… No         Rural  MKE         Rural_MKE Black Crim… Drunk
+ 8 R_bcm1H0… No         Rural  MKE         Rural_MKE Dire… Aggr… Loud 
+ 9 R_1KrWqw… No         Rural  MKE         Rural_MKE Dire… Aggr… Masc…
+10 R_1nUdUJ… No         Rural  MKE         Rural_MKE Adve… Tren… Cult…
+# ℹ 106 more rows
+# ℹ 352 more variables: MKE_4 &lt;chr&gt;, MKE_5 &lt;chr&gt;, Madison_1 &lt;chr&gt;,
+#   Madison_2 &lt;chr&gt;, Madison_3 &lt;chr&gt;, Madison_4 &lt;chr&gt;,
+#   Madison_5 &lt;chr&gt;, Trial_1 &lt;dbl&gt;, Trial_2 &lt;dbl&gt;, Trial_3 &lt;dbl&gt;,
+#   Trial_4 &lt;dbl&gt;, Trial_5 &lt;dbl&gt;, Trial_6 &lt;dbl&gt;, Trial_7 &lt;dbl&gt;,
+#   Trial_8 &lt;dbl&gt;, Trial_9 &lt;dbl&gt;, Trial_10 &lt;dbl&gt;, Trial_11 &lt;dbl&gt;,
+#   Trial_12 &lt;dbl&gt;, Trial_13 &lt;dbl&gt;, Trial_14 &lt;dbl&gt;, Trial_15 &lt;dbl&gt;, …</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>milestone3</span> <span class='op'>&lt;-</span> <span class='va'>phase1</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>Sample</span>, <span class='va'>RCCondition</span>, <span class='va'>Rural_FT</span>, <span class='va'>Urban_FT</span>, <span class='va'>Madison_FT</span>, <span class='va'>Milwaukee_FT</span>, <span class='va'>Rural_Con</span><span class='op'>)</span></span>
+<span><span class='va'>milestone3</span></span></code></pre>
+</div>
+<pre><code># A tibble: 122 × 7
+   Sample RCCondition Rural_FT Urban_FT Madison_FT Milwaukee_FT
+   &lt;chr&gt;  &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt;        &lt;dbl&gt;
+ 1 Rural  MKE              100       26         39           82
+ 2 Rural  MKE              100       NA         33           26
+ 3 Rural  MKE               90       NA         74           25
+ 4 Rural  MKE               99       82         82           82
+ 5 Rural  MKE              100      100        100          100
+ 6 Rural  MKE              100      100        100          100
+ 7 Rural  MKE               99       29         27           28
+ 8 Rural  MKE              100       50         14           42
+ 9 Rural  MKE               94       17         53           47
+10 Rural  MKE               NA       NA         NA           NA
+# ℹ 112 more rows
+# ℹ 1 more variable: Rural_Con &lt;dbl&gt;</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>table1</span> <span class='op'>&lt;-</span> <span class='va'>milestone3</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>Sample</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>Meanrural <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>Rural_FT</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>,</span>
+<span>            Meanurban <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>Urban_FT</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>,</span>
+<span>            Difference <span class='op'>=</span> <span class='va'>Meanurban</span> <span class='op'>-</span> <span class='va'>Meanrural</span>,</span>
+<span>            Mean_Rural_Identity <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>Rural_Con</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>table1</span>, digits <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span></span></code></pre>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Sample</th>
+<th style="text-align: right;">Meanrural</th>
+<th style="text-align: right;">Meanurban</th>
+<th style="text-align: right;">Difference</th>
+<th style="text-align: right;">Mean_Rural_Identity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Rural</td>
+<td style="text-align: right;">76.67</td>
+<td style="text-align: right;">58.60</td>
+<td style="text-align: right;">-18.07</td>
+<td style="text-align: right;">3.28</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Urban</td>
+<td style="text-align: right;">62.98</td>
+<td style="text-align: right;">68.28</td>
+<td style="text-align: right;">5.30</td>
+<td style="text-align: right;">2.93</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>graph1</span> <span class='op'>&lt;-</span> <span class='va'>milestone3</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Rural_Con</span>, y <span class='op'>=</span> <span class='va'>Urban_FT</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='va'>Sample</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Rural Consciousness (Low to High)"</span>, </span>
+<span>                    y <span class='op'>=</span> <span class='st'>"Opinion on Urban People (Low to High)"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>graph1</span></span></code></pre>
+</div>
+<p><img src="index_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
