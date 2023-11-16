@@ -9,13 +9,15 @@ output:
 
 
 
-## Milestone 1-3
+##Introduction
+
 Is rural consciousness affected by factors such as education, income, or exposure to diversity? For my final project, I plan on analyzing replication data from Matthew Nelsen and Christopher Petsko’s “Race and White Rural Consciousness” to examine whether the average sense of “rural consciousness” (defined as the view that rural problems are the result of the negligent choices of the elite) is correlated with factors associated with urban living such as earning a higher income, possessing a college degree, and regular exposure to minorities. While the original study found that rural citizens described city dwellers more negatively (e.g. lazy) and also perceived residents of their capital city as being more black (the more extreme the rural consciousness, the more extreme the perception of blackness), I also hypothesize that the three aforementioned factors will be correlated with a lower sense of rural consciousness than originally generalized. These explanatory factors can all be measured empirically using figures such as yearly income, highest degree earned, and demographic percentages of surveyed counties. The outcome variables, perception of blackness and rural consciousness, are pre-measured in the existing data through the mean of a survey that logged positive/negative responses and average composition of faces ranked to be more or less urban.Seeing a negative ATE between each one of these and mean rural consciousness would prove my hypothesis while seeing a variable or increasing ATE would disprove it. 
 
 Nelsen, Matthew D., and Christopher D. Petsko. “Race and white rural consciousness.” Perspectives on Politics, vol. 19, no. 4, 2021, pp. 1205–1218, https://doi.org/10.1017/s1537592721001948. 
 
 ```{r}
 library(tidyverse)
+library(infer)
 phase1 <- read_csv("data/Phase1Data.csv")
 phase1 |>
   filter(Exclusions == "No")
@@ -36,13 +38,86 @@ knitr::kable(table1, digits = 2)
 ```
 
 
-```{r}
+```{r,fig.width = 11, fig.height = 4}
 graph1 <- milestone3 |>
   ggplot(mapping = aes(x = Rural_Con, y = Urban_FT)) + 
   geom_point(aes(color = Sample)) + 
   geom_smooth() + labs(x = "Rural Consciousness (Low to High)", 
-                    y = "Opinion on Urban People (Low to High)")
+                    y = "Opinion on Urban People (Low to High)",
+                    title = "Rural Consciousness vs Opinion on Urbanites")
 
 graph1
 
 ```
+While this graph provides a general trend of the data (High rural consciousness is correlated with low opinion on urbanites), this is just a recreation of what the original study found, not what we're seeking to analyze now (effect of education and income on rural consciousness)
+
+```{r}
+milestone4 <- phase1 |>
+  filter(Exclusions == "No") |>
+  group_by(Sample, Edu, Income) |>
+  summarize(Meanrural = mean(Rural_FT, na.rm = TRUE),
+            Meanurban = mean(Urban_FT, na.rm = TRUE),
+            Difference = Meanurban - Meanrural,
+            Mean_Rural_Identity = mean(Rural_Con, na.rm = TRUE)) 
+
+Just_Rural <- milestone4 |>
+  filter(Sample == "Rural") 
+
+Just_Urban <- milestone4 |>
+  filter(Sample == "Urban")  
+
+```
+
+
+```{r}
+Rural_Plot <- ggplot(Just_Rural, aes(x = Edu, y = Mean_Rural_Identity)) +
+  geom_point(color = "steelblue1") + geom_smooth(method = "lm", se = FALSE, color = "indianred1", size = 1.5) + labs(x = "Education Level", y = "Mean Rural Identity", title = "Education vs Rural Identity (Rural)")
+
+Rural_Plot
+
+```
+Based on the least squares regression line, there seems to be an negative correlation between education level and rural identity within the rural sample.
+
+```{r}
+rural_edu <- lm(Mean_Rural_Identity ~ Edu, data = Just_Rural)
+summary(rural_edu)
+coef(rural_edu)
+```
+
+For participants in the rural sample, a one point increase in education is associated with a .20 point decrease in predicted rural identity. When education is 0, the projected rural identity is 4.19
+
+The R^2 for the regression line was .1948, indicating a rather weak correlation.
+
+```{r}
+Urban_Plot <- ggplot(Just_Urban, aes(x = Edu, y = Mean_Rural_Identity)) +
+  geom_point(color = "steelblue1") + geom_smooth(method = "lm", se = FALSE, color = "indianred1", size = 1.5) + labs(x = "Education Level", y = "Mean Rural Identity", title = "Education vs Rural Identity (Urban)")
+
+Urban_Plot
+```
+For participants in the urban sample, there appears to be a positive correlation between education level and rural identity (different than what we'd expect based on the last plot)
+
+```{r}
+urban_edu <- lm(Mean_Rural_Identity ~ Edu, data = Just_Urban)
+summary(urban_edu)
+coef(urban_edu)
+```
+For participants in the urban sample, a one point increase in education is associated with a .046 point increase in predicted rural identity. When education is 0, the projected rural identity is 2.83.
+
+
+For this regression line, the R squared is .0163, which essentially indicates that there is no correlation at all between these variables.
+
+Because the previous regressions were pretty bad and inconclusive, I decided to run a few multiple regressions to attempt to improve the model.
+
+```{r}
+multi_fit_rural <- lm(Mean_Rural_Identity ~ Edu + Income, data = Just_Rural)
+summary(multi_fit_rural)
+coef(multi_fit_rural)
+```
+The adjusted R squared for this new regression is .3066, meaning correlation is stronger in the rural sample when both education and income are considered. The correlation still proceeds in the same direction as before.
+
+```{r}
+multi_fit_urban <- lm(Mean_Rural_Identity ~ Edu + Income, data = Just_Urban)
+summary(multi_fit_urban)
+coef(multi_fit_urban)
+```
+The adjusted R squared for this new regression is worse than the previous.
