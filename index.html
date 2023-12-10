@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["data/Phase1Data.csv","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-3-1.png","index_files/figure-html5/unnamed-chunk-5-1.png","index_files/figure-html5/unnamed-chunk-7-1.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.24/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["data/Phase1Data.csv","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-11-1.png","index_files/figure-html5/unnamed-chunk-3-1.png","index_files/figure-html5/unnamed-chunk-5-1.png","index_files/figure-html5/unnamed-chunk-7-1.png","index_files/figure-html5/unnamed-chunk-9-1.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.24/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1473,6 +1473,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <!--/radix_placeholder_distill-->
   <script src="index_files/header-attrs-2.24/header-attrs.js"></script>
+  <script src="index_files/kePrint-0.0.1/kePrint.js"></script>
+  <link href="index_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
   <script src="index_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="index_files/popper-2.6.0/popper.min.js"></script>
   <link href="index_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1517,14 +1519,24 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<p>##Introduction</p>
-<p>Is rural consciousness affected by factors such as education, income, or exposure to diversity? For my final project, I plan on analyzing replication data from Matthew Nelsen and Christopher Petsko’s “Race and White Rural Consciousness” to examine whether the average sense of “rural consciousness” (defined as the view that rural problems are the result of the negligent choices of the elite) is correlated with factors associated with urban living such as earning a higher income, possessing a college degree, and regular exposure to minorities. While the original study found that rural citizens described city dwellers more negatively (e.g. lazy) and also perceived residents of their capital city as being more black (the more extreme the rural consciousness, the more extreme the perception of blackness), I also hypothesize that the three aforementioned factors will be correlated with a lower sense of rural consciousness than originally generalized. These explanatory factors can all be measured empirically using figures such as yearly income, highest degree earned, and demographic percentages of surveyed counties. The outcome variables, perception of blackness and rural consciousness, are pre-measured in the existing data through the mean of a survey that logged positive/negative responses and average composition of faces ranked to be more or less urban.Seeing a negative ATE between each one of these and mean rural consciousness would prove my hypothesis while seeing a variable or increasing ATE would disprove it.</p>
+<p><strong>Introduction</strong></p>
+<p>Is rural consciousness affected by urbanizing factors such as education and income?</p>
+<p>For my final project, I analyzed replication data from Matthew Nelsen and Christopher Petsko’s “Race and White Rural Consciousness” to examine whether the average sense of “rural consciousness” (defined as the view that rural problems are the result of the negligent choices of the elite) is correlated with factors associated with urban living such as earning a higher income and having a college degree. While the original study found that rural citizens described city dwellers more negatively (e.g. lazy) and also perceived residents of their capital city as being more black (the more extreme the rural consciousness, the more extreme the perception of blackness), I also hypothesize that the aforementioned factors will be correlated with a lower sense of rural consciousness than originally generalized. I believe this analysis is important because it provides more specific insight into the specific components of rural identity beyond political party and the extent to which resentment is controlled by racial, economic, and political differences.</p>
+<p><strong>Data &amp; Measurement of Variables (Original Study)</strong></p>
+<p>Our explanatory factors can all be measured empirically using figures such as yearly income (broken up into brackets of $25k) and highest degree earned (measured from 1-7 in the study, with 1 corresponding to incomplete high school education and 7 corresponding with a professional degree). The outcome variables, perception of blackness and rural consciousness, are measured in the existing data through the mean of a survey that logged positive/negative responses to questions about urban residents and average composition of faces ranked to be more or less urban.</p>
+<p>Seeing a negative ATE between each one of these and mean rural consciousness would support my hypothesis while an increase in ATE or no difference at all would disprove it. Because there is no additional treatment being administered, this study is observational and cannot be used to infer causality. Even if a high correlation is found, it is possible for one or more of these variables to be a confounding variable. Because my analysis is comparing multiple groups at the same point in time, it is cross-sectional.</p>
+<p><strong>Source</strong></p>
 <p>Nelsen, Matthew D., and Christopher D. Petsko. “Race and white rural consciousness.” Perspectives on Politics, vol. 19, no. 4, 2021, pp. 1205–1218, <a href="https://doi.org/10.1017/s1537592721001948" class="uri">https://doi.org/10.1017/s1537592721001948</a>.</p>
+<p><strong>Data</strong></p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>#Loading Data and Filtering to Variables of Interest</span></span>
+<span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
 <span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/tidymodels/infer'>infer</a></span><span class='op'>)</span></span>
+<span></span>
 <span><span class='va'>phase1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"data/Phase1Data.csv"</span><span class='op'>)</span></span>
+<span></span>
 <span><span class='va'>phase1</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Exclusions</span> <span class='op'>==</span> <span class='st'>"No"</span><span class='op'>)</span></span></code></pre>
 </div>
@@ -1550,28 +1562,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 #   Trial_12 &lt;dbl&gt;, Trial_13 &lt;dbl&gt;, Trial_14 &lt;dbl&gt;, Trial_15 &lt;dbl&gt;, …</code></pre>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>milestone3</span> <span class='op'>&lt;-</span> <span class='va'>phase1</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>Sample</span>, <span class='va'>RCCondition</span>, <span class='va'>Rural_FT</span>, <span class='va'>Urban_FT</span>, <span class='va'>Madison_FT</span>, <span class='va'>Milwaukee_FT</span>, <span class='va'>Rural_Con</span><span class='op'>)</span></span>
-<span><span class='va'>milestone3</span></span></code></pre>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>Sample</span>, <span class='va'>RCCondition</span>, <span class='va'>Rural_FT</span>, <span class='va'>Urban_FT</span>, <span class='va'>Madison_FT</span>, <span class='va'>Milwaukee_FT</span>, <span class='va'>Rural_Con</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code># A tibble: 122 × 7
-   Sample RCCondition Rural_FT Urban_FT Madison_FT Milwaukee_FT
-   &lt;chr&gt;  &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt;        &lt;dbl&gt;
- 1 Rural  MKE              100       26         39           82
- 2 Rural  MKE              100       NA         33           26
- 3 Rural  MKE               90       NA         74           25
- 4 Rural  MKE               99       82         82           82
- 5 Rural  MKE              100      100        100          100
- 6 Rural  MKE              100      100        100          100
- 7 Rural  MKE               99       29         27           28
- 8 Rural  MKE              100       50         14           42
- 9 Rural  MKE               94       17         53           47
-10 Rural  MKE               NA       NA         NA           NA
-# ℹ 112 more rows
-# ℹ 1 more variable: Rural_Con &lt;dbl&gt;</code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>table1</span> <span class='op'>&lt;-</span> <span class='va'>milestone3</span> <span class='op'>|&gt;</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>#Table of Rural Identity Values and Differences</span></span>
+<span></span>
+<span><span class='va'>table1</span> <span class='op'>&lt;-</span> <span class='va'>milestone3</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>Sample</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>Meanrural <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>Rural_FT</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>,</span>
 <span>            Meanurban <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>Urban_FT</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>,</span>
@@ -1609,7 +1607,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>graph1</span> <span class='op'>&lt;-</span> <span class='va'>milestone3</span> <span class='op'>|&gt;</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>#Visualization of Rural Identity Between Groups</span></span>
+<span></span>
+<span><span class='va'>graph1</span> <span class='op'>&lt;-</span> <span class='va'>milestone3</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Rural_Con</span>, y <span class='op'>=</span> <span class='va'>Urban_FT</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> </span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='va'>Sample</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> </span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Rural Consciousness (Low to High)"</span>, </span>
@@ -1620,16 +1620,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 <p><img src="index_files/figure-html5/unnamed-chunk-3-1.png" width="1056" /></p>
 </div>
-<p>While this graph provides a general trend of the data (High rural consciousness is correlated with low opinion on urbanites), this is just a recreation of what the original study found, not what we’re seeking to analyze now (effect of education and income on rural consciousness)</p>
+<p>While this graph provides a general trend of the data (High rural consciousness is correlated with low opinion on urbanites), this is just a recreation of what the original study found, not what we’re seeking to observe in this analysis (effect of education and income on rural consciousness)</p>
+<p><strong>Results</strong></p>
+<p>Now that we have a good idea of the general trend between rural and urban values of rural identity, we will summarize the data and analyze correlations between specific variables and the dependent variable.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>milestone4</span> <span class='op'>&lt;-</span> <span class='va'>phase1</span> <span class='op'>|&gt;</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>#Creation of Mean Variables for Analysis</span></span>
+<span></span>
+<span><span class='va'>milestone4</span> <span class='op'>&lt;-</span> <span class='va'>phase1</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Exclusions</span> <span class='op'>==</span> <span class='st'>"No"</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>Sample</span>, <span class='va'>Edu</span>, <span class='va'>Income</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>Meanrural <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>Rural_FT</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>,</span>
 <span>            Meanurban <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>Urban_FT</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>,</span>
 <span>            Difference <span class='op'>=</span> <span class='va'>Meanurban</span> <span class='op'>-</span> <span class='va'>Meanrural</span>,</span>
-<span>            Mean_Rural_Identity <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>Rural_Con</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span> </span>
+<span>            Mean_Rural_Identity <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>Rural_Con</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span></span>
 <span></span>
 <span><span class='va'>Just_Rural</span> <span class='op'>&lt;-</span> <span class='va'>milestone4</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Sample</span> <span class='op'>==</span> <span class='st'>"Rural"</span><span class='op'>)</span> </span>
@@ -1640,17 +1644,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>Rural_Plot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>Just_Rural</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Edu</span>, y <span class='op'>=</span> <span class='va'>Mean_Rural_Identity</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>#Scatterplot of Mean Rural Identity vs Education (Rural)</span></span>
+<span></span>
+<span><span class='va'>Rural_Plot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>Just_Rural</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Edu</span>, y <span class='op'>=</span> <span class='va'>Mean_Rural_Identity</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"steelblue1"</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span>method <span class='op'>=</span> <span class='st'>"lm"</span>, se <span class='op'>=</span> <span class='cn'>FALSE</span>, color <span class='op'>=</span> <span class='st'>"indianred1"</span>, size <span class='op'>=</span> <span class='fl'>1.5</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Education Level"</span>, y <span class='op'>=</span> <span class='st'>"Mean Rural Identity"</span>, title <span class='op'>=</span> <span class='st'>"Education vs Rural Identity (Rural)"</span><span class='op'>)</span></span>
 <span></span>
 <span><span class='va'>Rural_Plot</span></span></code></pre>
 </div>
 <p><img src="index_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
 </div>
-<p>Based on the least squares regression line, there seems to be an negative correlation between education level and rural identity within the rural sample.</p>
+<p>Based on the least squares regression line, there seems to be an negative correlation between education level and rural identity within the rural sample. That means that on average, an increase in education level is associated with a lower rural identity score.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>rural_edu</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Mean_Rural_Identity</span> <span class='op'>~</span> <span class='va'>Edu</span>, data <span class='op'>=</span> <span class='va'>Just_Rural</span><span class='op'>)</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>#Linear Regression of Mean Rural Identity and Education (Rural)</span></span>
+<span></span>
+<span><span class='va'>rural_edu</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Mean_Rural_Identity</span> <span class='op'>~</span> <span class='va'>Edu</span>, data <span class='op'>=</span> <span class='va'>Just_Rural</span><span class='op'>)</span></span>
+<span></span>
 <span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>rural_edu</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>
@@ -1676,22 +1685,243 @@ F-statistic: 6.291 on 1 and 26 DF,  p-value: 0.01871</code></pre>
 </div>
 <pre><code>(Intercept)         Edu 
   4.1854559  -0.2002852 </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/modelsummary/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='va'>rural_edu</span>,</span>
+<span>                           statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"s.e. = {std.error}"</span>,</span>
+<span>                                         <span class='st'>"p = {p.value}"</span><span class='op'>)</span>,</span>
+<span>                           gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
-<p>For participants in the rural sample, a one point increase in education is associated with a .20 point decrease in predicted rural identity. When education is 0, the projected rural identity is 4.19</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:center;">
+ (1)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:center;">
+4.185
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 0.336
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+p = &lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Edu
+</td>
+<td style="text-align:center;">
+−0.200
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 0.080
+</td>
+</tr>
+<tr>
+<td style="text-align:left;box-shadow: 0px 1.5px">
+</td>
+<td style="text-align:center;box-shadow: 0px 1.5px">
+p = 0.019
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Num.Obs.
+</td>
+<td style="text-align:center;">
+28
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2
+</td>
+<td style="text-align:center;">
+0.195
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2 Adj.
+</td>
+<td style="text-align:center;">
+0.164
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>For participants in the rural sample, a one point increase in education is associated with a .20 point decrease in predicted rural identity. The P value for this is .019, meaning that we can reject the null that mean rural identity is the same on average regardless of education in the rural sample. However, we cannot say this relationship is causal because there is no treatment.</p>
+<p>Observing the intercept, when education is 0, the projected rural identity is 4.19</p>
 <p>The R^2 for the regression line was .1948, indicating a rather weak correlation.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>Urban_Plot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>Just_Urban</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Edu</span>, y <span class='op'>=</span> <span class='va'>Mean_Rural_Identity</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>#Scatterplot of Income vs Rural Identity (Rural)</span></span>
+<span><span class='va'>Rural_Plot2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>Just_Rural</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Income</span>, y <span class='op'>=</span> <span class='va'>Mean_Rural_Identity</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"steelblue1"</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span>method <span class='op'>=</span> <span class='st'>"lm"</span>, se <span class='op'>=</span> <span class='cn'>FALSE</span>, color <span class='op'>=</span> <span class='st'>"indianred1"</span>, size <span class='op'>=</span> <span class='fl'>1.5</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Income Level"</span>, y <span class='op'>=</span> <span class='st'>"Mean Rural Identity"</span>, title <span class='op'>=</span> <span class='st'>"Income vs Rural Identity (Rural)"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>Rural_Plot2</span></span></code></pre>
+</div>
+<p><img src="index_files/figure-html5/unnamed-chunk-7-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>#Linear Regression of Income vs Rural Identity (Rural)</span></span>
+<span><span class='va'>rural_income</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Mean_Rural_Identity</span> <span class='op'>~</span> <span class='va'>Income</span>, data <span class='op'>=</span> <span class='va'>Just_Rural</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>rural_income</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>
+Call:
+lm(formula = Mean_Rural_Identity ~ Income, data = Just_Rural)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.23077 -0.41354  0.02535  0.24239  1.25849 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  4.03190    0.27233  14.805  3.5e-14 ***
+Income      -0.15593    0.06052  -2.577    0.016 *  
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 0.5889 on 26 degrees of freedom
+Multiple R-squared:  0.2034,    Adjusted R-squared:  0.1728 
+F-statistic: 6.639 on 1 and 26 DF,  p-value: 0.01601</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>rural_income</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>(Intercept)      Income 
+  4.0318978  -0.1559307 </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/modelsummary/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='va'>rural_income</span>,</span>
+<span>                           statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"s.e. = {std.error}"</span>,</span>
+<span>                                         <span class='st'>"p = {p.value}"</span><span class='op'>)</span>,</span>
+<span>                           gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:center;">
+ (1)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:center;">
+4.032
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 0.272
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+p = &lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Income
+</td>
+<td style="text-align:center;">
+−0.156
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 0.061
+</td>
+</tr>
+<tr>
+<td style="text-align:left;box-shadow: 0px 1.5px">
+</td>
+<td style="text-align:center;box-shadow: 0px 1.5px">
+p = 0.016
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Num.Obs.
+</td>
+<td style="text-align:center;">
+28
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2
+</td>
+<td style="text-align:center;">
+0.203
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2 Adj.
+</td>
+<td style="text-align:center;">
+0.173
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>For participants in the rural sample, a 1 point increase ($25k) in income was associated with a .156 point decrease in mean rural identity. The P value for this was .016, making the difference statistically significant at alpha = 0.05</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>#Scatterplot of Education vs Rural Identity w/Reg. Line (Urban)</span></span>
+<span></span>
+<span><span class='va'>Urban_Plot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>Just_Urban</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Edu</span>, y <span class='op'>=</span> <span class='va'>Mean_Rural_Identity</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"steelblue1"</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span>method <span class='op'>=</span> <span class='st'>"lm"</span>, se <span class='op'>=</span> <span class='cn'>FALSE</span>, color <span class='op'>=</span> <span class='st'>"indianred1"</span>, size <span class='op'>=</span> <span class='fl'>1.5</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Education Level"</span>, y <span class='op'>=</span> <span class='st'>"Mean Rural Identity"</span>, title <span class='op'>=</span> <span class='st'>"Education vs Rural Identity (Urban)"</span><span class='op'>)</span></span>
 <span></span>
 <span><span class='va'>Urban_Plot</span></span></code></pre>
 </div>
-<p><img src="index_files/figure-html5/unnamed-chunk-7-1.png" width="624" /></p>
+<p><img src="index_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
 </div>
 <p>For participants in the urban sample, there appears to be a positive correlation between education level and rural identity (different than what we’d expect based on the last plot)</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>urban_edu</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Mean_Rural_Identity</span> <span class='op'>~</span> <span class='va'>Edu</span>, data <span class='op'>=</span> <span class='va'>Just_Urban</span><span class='op'>)</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>#Linear Regression of Mean Rural Identity and Education (Urban)</span></span>
+<span><span class='va'>urban_edu</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Mean_Rural_Identity</span> <span class='op'>~</span> <span class='va'>Edu</span>, data <span class='op'>=</span> <span class='va'>Just_Urban</span><span class='op'>)</span></span>
+<span></span>
 <span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>urban_edu</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>
@@ -1717,13 +1947,234 @@ F-statistic: 0.4141 on 1 and 25 DF,  p-value: 0.5257</code></pre>
 </div>
 <pre><code>(Intercept)         Edu 
  2.83195021  0.04603216 </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/modelsummary/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='va'>urban_edu</span>,</span>
+<span>                           statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"s.e. = {std.error}"</span>,</span>
+<span>                                         <span class='st'>"p = {p.value}"</span><span class='op'>)</span>,</span>
+<span>                           gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
-<p>For participants in the urban sample, a one point increase in education is associated with a .046 point increase in predicted rural identity. When education is 0, the projected rural identity is 2.83.</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:center;">
+ (1)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:center;">
+2.832
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 0.299
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+p = &lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Edu
+</td>
+<td style="text-align:center;">
+0.046
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 0.072
+</td>
+</tr>
+<tr>
+<td style="text-align:left;box-shadow: 0px 1.5px">
+</td>
+<td style="text-align:center;box-shadow: 0px 1.5px">
+p = 0.526
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Num.Obs.
+</td>
+<td style="text-align:center;">
+27
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2
+</td>
+<td style="text-align:center;">
+0.016
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2 Adj.
+</td>
+<td style="text-align:center;">
+−0.023
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>For participants in the urban sample, a one point increase in education is associated with a .046 point increase in predicted rural identity. The P value for this coefficient is .526, which indicates that there is more than a 50% chance that results this extreme could occur by chance (we fail to reject Ho). When education is 0, the projected rural identity is 2.83.</p>
 <p>For this regression line, the R squared is .0163, which essentially indicates that there is no correlation at all between these variables.</p>
-<p>Because the previous regressions were pretty bad and inconclusive, I decided to run a few multiple regressions to attempt to improve the model.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>multi_fit_rural</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Mean_Rural_Identity</span> <span class='op'>~</span> <span class='va'>Edu</span> <span class='op'>+</span> <span class='va'>Income</span>, data <span class='op'>=</span> <span class='va'>Just_Rural</span><span class='op'>)</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>#Scatterplot of Income vs Rural Identity (Urban)</span></span>
+<span><span class='va'>Urban_Plot2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>Just_Rural</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Income</span>, y <span class='op'>=</span> <span class='va'>Mean_Rural_Identity</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"steelblue1"</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span>method <span class='op'>=</span> <span class='st'>"lm"</span>, se <span class='op'>=</span> <span class='cn'>FALSE</span>, color <span class='op'>=</span> <span class='st'>"indianred1"</span>, size <span class='op'>=</span> <span class='fl'>1.5</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Income Level"</span>, y <span class='op'>=</span> <span class='st'>"Mean Rural Identity"</span>, title <span class='op'>=</span> <span class='st'>"Income vs Rural Identity (Urban)"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>Urban_Plot2</span></span></code></pre>
+</div>
+<p><img src="index_files/figure-html5/unnamed-chunk-11-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>urban_income</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Mean_Rural_Identity</span> <span class='op'>~</span> <span class='va'>Income</span>, </span>
+<span>                   data <span class='op'>=</span> <span class='va'>Just_Urban</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>urban_income</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>
+Call:
+lm(formula = Mean_Rural_Identity ~ Income, data = Just_Urban)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.0889 -0.4184 -0.1400  0.6019  1.0399 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  2.89566    0.25174  11.502 2.99e-11 ***
+Income       0.03220    0.06234   0.517     0.61    
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 0.6186 on 24 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.011, Adjusted R-squared:  -0.03021 
+F-statistic: 0.2669 on 1 and 24 DF,  p-value: 0.6102</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>urban_income</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>(Intercept)      Income 
+ 2.89565972  0.03220486 </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/modelsummary/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='va'>urban_income</span>,</span>
+<span>                           statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"s.e. = {std.error}"</span>,</span>
+<span>                                         <span class='st'>"p = {p.value}"</span><span class='op'>)</span>,</span>
+<span>                           gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:center;">
+ (1)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:center;">
+2.896
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 0.252
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+p = &lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Income
+</td>
+<td style="text-align:center;">
+0.032
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 0.062
+</td>
+</tr>
+<tr>
+<td style="text-align:left;box-shadow: 0px 1.5px">
+</td>
+<td style="text-align:center;box-shadow: 0px 1.5px">
+p = 0.610
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Num.Obs.
+</td>
+<td style="text-align:center;">
+26
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2
+</td>
+<td style="text-align:center;">
+0.011
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2 Adj.
+</td>
+<td style="text-align:center;">
+−0.030
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>In the urban sample, a one point increase (+$25k) in income was associated with a .032 point increase in rural identity. The P value on this coefficient was .61 (very high), meaning there is a large chance this difference could be by chance and this value is not statistically significant.</p>
+<p><strong>Multiple Regressions</strong></p>
+<p>Because the previous regressions were rather weak and inconclusive, I decided to run a few multiple regressions in an attempt to improve the model.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>#Multiple Regression w/Education and Income (Rural)</span></span>
+<span></span>
+<span><span class='va'>multi_fit_rural</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Mean_Rural_Identity</span> <span class='op'>~</span> <span class='va'>Edu</span> <span class='op'>+</span> <span class='va'>Income</span>, data <span class='op'>=</span> <span class='va'>Just_Rural</span><span class='op'>)</span></span>
+<span></span>
 <span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>multi_fit_rural</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>
@@ -1750,11 +2201,124 @@ F-statistic:  6.97 on 2 and 25 DF,  p-value: 0.003928</code></pre>
 </div>
 <pre><code>(Intercept)         Edu      Income 
   4.6805523  -0.1795534  -0.1405559 </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/modelsummary/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='va'>multi_fit_rural</span>,</span>
+<span>                           statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"s.e. = {std.error}"</span>,</span>
+<span>                                         <span class='st'>"p = {p.value}"</span><span class='op'>)</span>,</span>
+<span>                           gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
-<p>The adjusted R squared for this new regression is .3066, meaning correlation is stronger in the rural sample when both education and income are considered. The correlation still proceeds in the same direction as before.</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:center;">
+ (1)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:center;">
+4.681
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 0.363
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+p = &lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Edu
+</td>
+<td style="text-align:center;">
+−0.180
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 0.073
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+p = 0.021
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Income
+</td>
+<td style="text-align:center;">
+−0.141
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 0.056
+</td>
+</tr>
+<tr>
+<td style="text-align:left;box-shadow: 0px 1.5px">
+</td>
+<td style="text-align:center;box-shadow: 0px 1.5px">
+p = 0.018
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Num.Obs.
+</td>
+<td style="text-align:center;">
+28
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2
+</td>
+<td style="text-align:center;">
+0.358
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2 Adj.
+</td>
+<td style="text-align:center;">
+0.307
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The adjusted R squared for this new regression is .3066, meaning correlation is stronger in the rural sample when both education and income are considered. The P values for both education and income are both low enough to reject Ho (not causally) at alpha = 0.05 and the correlation still proceeds in the same direction as before.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>multi_fit_urban</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Mean_Rural_Identity</span> <span class='op'>~</span> <span class='va'>Edu</span> <span class='op'>+</span> <span class='va'>Income</span>, data <span class='op'>=</span> <span class='va'>Just_Urban</span><span class='op'>)</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>#Multiple Regression with Education and Income (Urban)</span></span>
+<span></span>
+<span><span class='va'>multi_fit_urban</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Mean_Rural_Identity</span> <span class='op'>~</span> <span class='va'>Edu</span> <span class='op'>+</span> <span class='va'>Income</span>,</span>
+<span>                      data <span class='op'>=</span> <span class='va'>Just_Urban</span><span class='op'>)</span></span>
+<span></span>
 <span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>multi_fit_urban</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>
@@ -1782,9 +2346,122 @@ F-statistic: 0.2661 on 2 and 23 DF,  p-value: 0.7687</code></pre>
 </div>
 <pre><code>(Intercept)         Edu      Income 
  2.76395322  0.04113819  0.02381653 </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/modelsummary/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='va'>multi_fit_urban</span>,</span>
+<span>                           statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"s.e. = {std.error}"</span>,</span>
+<span>                                         <span class='st'>"p = {p.value}"</span><span class='op'>)</span>,</span>
+<span>                           gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
-<p>The adjusted R squared for this new regression is worse than the previous.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:center;">
+ (1)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:center;">
+2.764
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 0.359
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+p = &lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Edu
+</td>
+<td style="text-align:center;">
+0.041
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 0.079
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+p = 0.606
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Income
+</td>
+<td style="text-align:center;">
+0.024
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 0.065
+</td>
+</tr>
+<tr>
+<td style="text-align:left;box-shadow: 0px 1.5px">
+</td>
+<td style="text-align:center;box-shadow: 0px 1.5px">
+p = 0.719
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Num.Obs.
+</td>
+<td style="text-align:center;">
+26
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2
+</td>
+<td style="text-align:center;">
+0.023
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2 Adj.
+</td>
+<td style="text-align:center;">
+−0.062
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The adjusted R squared for this new regression is actually worse than the previous. Based on the P scores for education and income, we would not be able to reject the null for either variable at alpha = 0.05.</p>
+<p><strong>Discussion of Results</strong></p>
+<p>In conclusion, I was able to find some significance using education and income as predictors of mean rural identity in my analysis, albeit less than I expected.</p>
+<p>Through cross-referencing the regression models that I designed, my main takeaway was that education and income seemed to have a greater effect on rural identity within the rural sample than the urban sample. This is because while I was not able to find statistically significant correlations with any of my urban samples, I was able to find significant correlations between rural identity and both education and income for the rural sample. This suggests that while a higher education and income have little effect on urbanites’ sense of rural identity, those factors may cause differentiation among how rural residents’ perceive their identity. That is, richer and more educated rural residents may see themselves as less rural than poorer and less educated residents.</p>
+<p>The main drawback of my analysis is that there is no way to deduce causality. With more time and money, an experiment could be designed at least examine education and income as confounders (could these factors affect both the decision to move to the city/country AND rural identity?) For now, these results suggest that these factors are worth a second glance within the rural populations as sources that may lead to a different perception of identity beyond physical location.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
